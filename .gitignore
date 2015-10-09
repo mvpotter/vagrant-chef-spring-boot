@@ -1,0 +1,7 @@
+*.lock
+
+.vagrant/
+
+target/
+
+*.iml

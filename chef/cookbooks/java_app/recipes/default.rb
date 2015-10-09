@@ -1,0 +1,6 @@
+include_recipe 'apt::default'
+include_recipe 'java::default'
+include_recipe 'maven::default'
+include_recipe 'nginx::default'
+include_recipe 'postgresql::server'
+include_recipe 'java_app::webserver'
