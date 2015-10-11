@@ -8,4 +8,11 @@ firewall_rule 'http' do
   command :allow
 end
 
-resources('template[nginx.conf]').cookbook 'java_app'
+template "#{node.nginx.dir}/sites-available/java_app" do
+  source "nginx.java_app.erb"
+  mode 0644
+  owner node.nginx.user
+  group node.nginx.user
+end
+
+nginx_site "java_app"

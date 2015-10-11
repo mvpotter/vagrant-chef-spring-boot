@@ -22,8 +22,8 @@ override_attributes(
     },
 
     "nginx" => {
-      "conf_template" => "nginx.conf.erb"
-    },
+      "default_site_enabled" => false
+    }
     
 )
 
