@@ -3,12 +3,7 @@ include_recipe 'maven::default'
 
 execute 'maven_build' do
 	cwd '/vagrant'
-	command 'mvn clean install'
-end
-
-template '/tmp/launch' do
-  mode '0755'
-  source 'launch.erb'
+	command 'mvn -Dmaven.test.skip=true clean install'
 end
 
 execute 'launch_app' do

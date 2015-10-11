@@ -12,7 +12,10 @@ override_attributes(
 
     "maven" => {
       "version"       => 3,
-        "inatsall_java" => false
+      "inatsall_java" => false
+      # "mavenrc" => {
+      #   "opts" => "-Xmx128m"
+      # }
     },
 
     "postgresql" => {
